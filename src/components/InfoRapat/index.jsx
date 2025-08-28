@@ -7,6 +7,7 @@ import { useInfoRapat } from "@/contexts";
 import InfoRapatKonsumsi from "../InfoRapatKonsumsi";
 import { se } from "date-fns/locale";
 import { set } from "date-fns";
+import { toast } from "sonner";
 export default function InfoRapat() {
   const {
     waktuMulai,
@@ -27,12 +28,12 @@ export default function InfoRapat() {
   }
 
   useEffect(() => {
-    console.log("Waktu Mulai:", waktuMulai);
-    console.log("Waktu Selesai:", waktuSelesai);
+ 
+
   }, [waktuMulai, waktuSelesai]);
 
   useEffect(() => {
-    console.log("Waktu Mulai:::", waktuMulai);
+ 
   }, []);
 
 //   Jenis konsumsi
@@ -116,7 +117,7 @@ const items = [
               onChange={(e) => {
                 const value = Number(e.target.value) || 0;
                 if (value > kapasitas) {
-                    alert("Kapasitas telah terpenuhi");
+                    toast("peserta melebihi kapasitas")
                     // setJumlahPeserta(0); 
                   return;
                 }

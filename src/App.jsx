@@ -69,7 +69,7 @@ function App() {
             <div className="pl-7  pt-6 pb-9 inline-flex flex-col justify-start items-start gap-8">
               <BrowserRouter>
                 <Routes>
-                  <Route path="ruang-meeting" element={<RuangMeeting />}>
+                  <Route path="/" element={<RuangMeeting />}>
                     <Route index element={<DataRuangMeeting />} />
                     <Route
                       path="pesan-ruangan"

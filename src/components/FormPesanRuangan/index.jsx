@@ -30,9 +30,9 @@ export default function FormPesanRuangan() {
               data-trailing-icon="False"
               className="size- px-4 py-3 rounded-lg flex justify-center items-center gap-2"
             >
-              <div className="justify-start text-red-400 text-sm font-semibold font-['Open_Sans'] tracking-wide">
+              <button onClick={() => navigate(-1)} className="cursor-pointer justify-start text-red-400 text-sm font-semibold font-['Open_Sans'] tracking-wide">
                 Batal
-              </div>
+              </button>
             </div>
           </div>
           <Button onClick={()=>{

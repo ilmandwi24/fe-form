@@ -15,7 +15,6 @@ export default function InputWaktu({ dataWaktu, setDataWaktu, waktuTambahan }) {
 
   useEffect(() => {
     const sekarang = getHourAndMinutes();
-    console.log("ooo", sekarang);
     setWaktu(sekarang);
   }, [inputDate]);
 
@@ -52,7 +51,6 @@ export default function InputWaktu({ dataWaktu, setDataWaktu, waktuTambahan }) {
           />
           <Button
             onClick={() => {
-              alert(waktu);
               setInputDate(waktu);
               setDataWaktu(waktu);
               setOpen(false);

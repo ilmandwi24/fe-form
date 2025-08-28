@@ -12,8 +12,8 @@ export default function RuangMeeting() {
   // Pastikan pathArray memiliki setidaknya 3 elemen untuk menghindari error
   //   const thirdSegment = pathArray.length > 2 ? pathArray[2] : null;
   useEffect(() => {
-    console.log("Hello", pathArray[2] == "");
-    setCurrentLink(toTitleWithSpaces(pathArray[2]));
+    console.log("Hello", pathArray[1] == "");
+    setCurrentLink(toTitleWithSpaces(pathArray[1]));
   }, [location]);
 
   function toTitleWithSpaces(str) {
@@ -29,22 +29,21 @@ export default function RuangMeeting() {
       <div className="w-[1234px] inline-flex justify-between items-center">
         <div className="size- inline-flex flex-col justify-start items-start gap-1">
           <div className="size- inline-flex justify-start items-start gap-4">
-           {pathArray[2] != "" && ( <div
-              data-condition="True"
-              data-hover="False"
-              data-property-1="Leading Icon"
-              data-style="Fill Button"
-              className="size-10 flex justify-start items-start"
-            >
-              
+            {pathArray[1] != "" && (
+              <div
+                data-condition="True"
+                data-hover="False"
+                data-property-1="Leading Icon"
+                data-style="Fill Button"
+                className="size-10 flex justify-start items-start"
+              >
                 <Link
-                  to={`/${pathArray[1]}/`}
+                  to={-1}
                   className="flex-1 self-stretch p-3 bg-slate-500 rounded-lg flex justify-center items-center gap-2"
                 >
                   <ChevronLeft width={18} color="white" />
                 </Link>
-              
-            </div>
+              </div>
             )}
             <div className="inline-flex flex-col justify-start items-start gap-1">
               <div className="justify-start text-zinc-800 text-3xl font-bold font-['Open_Sans'] tracking-tight">
@@ -54,11 +53,12 @@ export default function RuangMeeting() {
                 <div className="justify-start text-neutral-400 text-sm font-normal font-['Open_Sans'] tracking-tight">
                   Ruang Meeting
                 </div>
-                {currentLink !== "" &&  <div className="relative h-4 justify-start text-slate-500 text-sm font-normal ">
-                  <ChevronRight width={16}  className="relative bottom-1"/>
-                </div>
-}
-               
+                {currentLink !== "" && (
+                  <div className="relative h-4 justify-start text-slate-500 text-sm font-normal ">
+                    <ChevronRight width={16} className="relative bottom-1" />
+                  </div>
+                )}
+
                 <div className="justify-start text-slate-500 text-sm font-normal font-['Open_Sans'] tracking-tight">
                   {currentLink !== "" && currentLink}
                 </div>
@@ -73,8 +73,8 @@ export default function RuangMeeting() {
           data-style="Fill Button"
           className="size- flex justify-start items-start"
         >
-          {pathArray[2] == "" && (
-            <Link to="/ruang-meeting/pesan-ruangan">
+          {pathArray[1] == "" && (
+            <Link to="/pesan-ruangan">
               <div
                 data-label="True"
                 data-leading-icon="True"
