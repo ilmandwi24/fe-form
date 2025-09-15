@@ -18,10 +18,10 @@ export default function InfoRapatKonsumsi() {
         // console.log("-------")
         //   console.log(data.slice(0,3))
         setKonsumsi(data.slice(0, 3));
-        console.log(konsumsi);
+    
       })
       .catch((error) => {
-        console.log(error);
+      
       })
       .finally(() => {
         // setLoadingOffice(false);
